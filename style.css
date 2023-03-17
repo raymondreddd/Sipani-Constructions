@@ -1,3 +1,5 @@
+@import "https://unpkg.com/open-props";
+
 *{
     margin:0;
     padding: 0;
@@ -11,10 +13,11 @@ body {
 .header{
     min-height: 100vh;
     width:100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(bgg5.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(34, 35, 38, 0.7)), url(bgg5.jpg);
     background-position: center;
     background-size:  cover;
     position: relative;
+    background-attachment: fixed;
 }
 
 nav{
@@ -165,26 +168,69 @@ h3{
 
 }
 
+.media-scroller{
+    width: 100%;
+    --spacer: var(--size-3);
+    display: grid;
+    gap: var(--spacer);
+    grid-auto-flow: column;
+    grid-auto-columns: 21%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
 
+    padding: 0 var(--spacer) var(--spacer);
+}
+
+.media-element{
+    display: grid;
+    grid-template-rows: min-content;
+    gap: var(--spacer);
+    padding: var(--spacer);
+    background: var(--surface-2);
+    border-radius: var(--radius-2);
+    box-shadow: var(--shadow-1);
+    transition: 0.4s;
+}
+
+.cardm{
+    background-color : lawngreen;
+    padding: var(--spacer);
+    transition: 0.4s;
+}
+
+.cardm:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+.media-element:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+
+
+
+.media-element > img{
+    /* width:100%; */
+    inline-size: 100%;
+    aspect-ratio: 10 / 12;
+    object-fit: cover;
+}
+
+.snaps-inline{
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: var(--spacer, 1rem);
+}
+
+.snaps-inline > *{
+    scroll-snap-align: start;
+}
 .project{
-    width: 80%;
+    width: 100%;
     margin: auto;
     text-align: center;
     padding-top: 50px;
 }
 
-.project-col{
-    flex-basis: 32%;
-    border-radius: 10px;
-    margin-bottom: 30px;
-    position: relative;
-    overflow: hidden;
-}
-
-.project-col img{
-    width: 100%;
-    display: block;
-}
 
 .layer{
     background: transparent;
@@ -345,6 +391,7 @@ h3{
     width: 100%;
     background-image: linear-gradient(rgba(4,9, 30, 0.7), rgba(4,9, 30, 0.7)), url(bg.jpg);
     background-position: center;
+    background-attachment: fixed;
     background-size: cover;
     text-align: center;
     color: white;
@@ -431,8 +478,11 @@ h3{
 }
 .contact-col input{
     width:100%;
-    padding: 15px;
-    margin-bottom: 17px;
+    display: block;
+    padding: 0.65rem 0.75rem;
+    line-height: 1.25;
+    margin: 0.5rem 0;
+    /* margin-bottom: 2rem; */
     outline: none;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -466,15 +516,26 @@ h3{
 } */ 
 
 form span{
-    position: absolute;
-    bottom: 12px;
-    right: 17px;
-    font-size: 14px;
+    margin-top:0.2rem;
+    display: block;
+    /* position: ; */
+    /* bottom: 12px;
+    
+    right: 17px; */
+    font-size: 0.7rem;
     color: red;
 }
 
+/* .input-flex{
+    display: flex;
+    justify-content: space-around;
+} */
+
+form i{
+    color: seagreen;
+}
 #submit-error{
-    color:red;
+    color:#ff0000;
 }
 
 
