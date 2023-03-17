@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Pawan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,600;0,800;1,400&family=Tilt+Neon&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://kit.fontawesome.com/510a4172a7.css" crossorigin="anonymous">
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="logo.jpg" alt="LOGO"></a>
+
+            <div class="nav-links" id="navLinks">
+                <!-- <i class="fa fa-times-circle"   aria-hidden="true" onClick="hideMenu()" ></i> -->
+                <i class="fa fa-solid fa-circle-xmark" onClick="hideMenu()"></i>
+                
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <!-- <li><a href="">PROJECTS</a></li>
+                    <li><a href="">TESTIMONIALS</a></li> -->
+                    <li><a href="contact_us.html">CONTACT US</a></li>
+                </ul>
+                
+            </div>
+            <i class="fa fa-solid fa-bars" onClick="showMenu()"></i>
+            <!-- <i class="fa fa-bars"  aria-hidden="true" onClick="showMenu()" ></i> -->
+        </nav>
+
+
+        <h1>Contact Us</h1>
+    </section>
+
+
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15552.86753262034!2d79.13532966907512!3d12.957969233360036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad477cf9529b29%3A0x3a3ed0acaaa4fea!2sFortune%20Park%20Vellore!5e0!3m2!1sen!2sin!4v1678546684310!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+
+    <!-- <img src="user3.jpg" alt="">
+
+
+    owner: PAWAN SIPANI
+        Get in Touch
+        you name
+        org
+        mail
+        contact no.
+        PRODUCT
+        send the message
+    
+    
+        <h3>Thank You for Contacting Us</h3> -->
+        
+
+
+    <section class="contact-us">
+        <div class="row">
+
+
+            <div class="contact-col">
+                <h3>Thank You For Contacting Us</h3>
+                <div>
+                    <i class="fa fa-home"></i>
+                <span>
+                    <h5>VIT vellore, Andal Nagri</h5>
+                    <p>BLR, karnata</p>
+                </span>
+                </div>
+
+                <div>
+                    <i class="fa fa-phone"></i>
+                <span>
+                    <h5>9140563783</h5>
+                    <p>Call Us, Monday to Sunday, 7PM-11PM</p>
+                </span>
+                </div>
+
+                <div>
+                    <i class="fa fa-envelope"></i>
+                <span>
+                    <h5>pawan@andal.com</h5>
+                    <p>Email Us</p>
+                </span>
+                </div>
+            </div>
+
+
+            <div class="contact-col">
+                <!-- action="form.php" method="post" -->
+                <form class="validate" onsubmit="sendEmail(); reset(); return false;">
+                    <input type="text" name="name" id="name" placeholder="Enter Your Name" onkeyup="validateName()" required>
+                    <span id="name-error">
+                       
+                    </span>
+
+                    <input type="email" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*$" name="email" id="email" placeholder="Enter Your Email" required>
+                    <span id="email-error">
+                       
+                    </span>
+
+                    <!-- <input type="email" name="email" id="" placeholder="Enter Your Email" required> -->
+                    <input type="text" name="org" id="org" placeholder="Enter Your Organisation Name" required>
+                    <span id="org-error">
+                        
+                    </span>
+
+                    <input type="number" name="phone" id="phone" placeholder="Enter Your Phone Number" pattern="[0-9]" minlength="10" maxlength="10" title="Please use 10 digits"
+                    required>
+                    <span id="phone-error">
+                        
+                    </span>
+
+                    <button type="submit" class="hero-btn red-btn">Send Message</button>
+                    <span id="submit-error">
+                        
+                    </span>
+                </form>
+            </div>
+            
+        </div>
+    </section>
+    
+
+
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dicta <br> voluptate ratione eligendi voluptatibus eveniet dolore, quae facere delectus rerum vitae fugit corporis ullam autem, cupiditate consectetur recusandae mollitia tenetur!</p>
+
+        <div class="icons">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-whatsapp"></i>
+            <i class="fa-brands fa-twitter"></i>
+
+        </div>
+        <p>
+            Made with <i class="fa-solid fa-heart-circle-check"></i> by Mukund
+        </p>
+        
+    </section>
+
+
+    
+
+
+    <script src="validate.js"></script>
+    <script>
+
+
+        var navLinks = document.getElementById("navLinks");
+    
+        function showMenu(){
+            navLinks.style.right = "0";
+        }
+    
+        function hideMenu(){
+        
+        navLinks.style.right = "-200px";
+        }
+
+        const sendEmail = () => {
+            
+
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "raymondreddington40@gmail.com",
+                Password : "1686DAE1F9A5FB0AB5EED5E1E11ADC767284",
+                To : 'bishtmukund01@gmail,com',
+                From :'raymondreddington40@gmail.com' ,
+                Subject : "New Contact form Enquiry",
+                Body : "Name of Client:" + document.getElementById("name").value
+                + "<br> Email:" + document.getElementById("email").value+
+                "<br> Phone No.:"+ document.getElementById("phone").value+
+                "<br> Organisation:"+document.getElementById("org").value+
+                "<br> Thats it"
+            }).then(
+            message => alert("email" )
+            );
+        }
+
+
+//         var forms = document.querySelectorAll('form');
+// for (var i = 0; i < forms.length; i++) {
+//     forms[i].setAttribute('novalidate', true);
+// }
+
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+</body>
+</html>
+
+
+
+<script src="https://kit.fontawesome.com/510a4172a7.js" crossorigin="anonymous"></script>
