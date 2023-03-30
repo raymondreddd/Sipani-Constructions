@@ -18,9 +18,11 @@
 
 
     <link rel="stylesheet" href="https://kit.fontawesome.com/510a4172a7.css" crossorigin="anonymous">
+
+    <script defer src="animate.js"></script>
 </head>
 <body>
-    <section class="header">
+    <section class="header ">
         <nav>
             <a href="index.html"><img src="logo.jpg" alt="LOGO"></a>
 
@@ -42,7 +44,7 @@
         </nav>
 
 
-        <div class="text-box">
+        <div class="text-box ">
             <h1>SIPANI COMPANY</h1>
             <p>
                 
@@ -74,19 +76,19 @@
             Welcome to our construction company! We specialize in turning your dreams into reality with personalized attention, superior craftsmanship, and exceptional service. Trust us to deliver the results you desire. Scroll down to learn more. 
         </p>
         <div class="row">
-            <div class="company-col">
+            <div class="company-col hidden1">
                 <h3>Why To Work with us?</h3>
                 <p>
                     Looking for a construction company that truly understands your needs and delivers exceptional results? Look no further than our team. As fellow property developers and owners, we know the importance of sticking to budgets, timelines, and exceeding expectations.
                 </p>
             </div>
-            <div class="company-col">
+            <div class="company-col hidden1">
                 <h3>Whats Unique With Us?</h3>
                 <p>
                     That's why we treat every project as if it were our own. Our attention to detail, clear communication, and use of high-quality materials have earned us a reputation as a trusted partner in the construction industry.
                 </p>
             </div>
-            <div class="company-col">
+            <div class="company-col hidden1">
                 <h3>Thanking you</h3>
                 <p>
                     Let us show you the same level of care and expertise that we would want for our own projects.
@@ -101,7 +103,7 @@
 
     <!--------PRVS projects--------->
     <section class="project">
-        <h1>Completed Projects</h1>
+        <h1>Completed Clients</h1>
         <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, architecto ipsum? Delectus pariatur voluptatum temporibus reiciendis cumque. 
         </p>
@@ -109,21 +111,29 @@
               
 
 
-        <div class="media-scroller  snaps-inline">
+        <div class="media-scroller  snaps-inline hidden1">
             <div class="media-element">
-                <img src="cement.jpg" alt="">
-                    <h3>Cement</h3>
+                <img src="user1.jpg" alt="">
+                    <h3>Company Cip </h3>
             </div>
             <div class="media-element">
-                <img src="cement2.jpg" alt="">
-                <h3>Rock</h3>
+                <img src="user2.jpg" alt="">
+                <h3>Rockt pvt</h3>
             </div>
             <div class="media-element">
-                <img src="cement3.jpg" alt="">
+                <img src="user3.jpg" alt="">
                 <h3>Cement</h3>
             </div>
             <div class="media-element">
-                <img src="cement4.jpg" alt="">
+                <img src="user4.jpg" alt="">
+                <h3>Bisht Com</h3>
+            </div>
+            <div class="media-element">
+                <img src="user1.jpg" alt="">
+                <h3>Cement & Movers</h3>
+            </div>
+            <div class="media-element">
+                <img src="user3.jpg" alt="">
                 <h3>Rock</h3>
             </div>
             <div class="media-element">
@@ -131,23 +141,15 @@
                 <h3>Cement</h3>
             </div>
             <div class="media-element">
-                <img src="cement2.jpg" alt="">
+                <img src="user4.jpg" alt="">
                 <h3>Rock</h3>
             </div>
-            <div class="media-element">
-                <img src="cement.jpg" alt="">
-                <h3>Cement</h3>
-            </div>
-            <div class="media-element">
-                <img src="cement4.jpg" alt="">
-                <h3>Rock</h3>
-            </div>
-            
-            
         </div>
-
-
-        
+        <button id="slideBack" >
+            <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <button id="slide" > 
+            <i class="fa-solid fa-arrow-right"></i></button>
 
 
     </section>
@@ -157,19 +159,19 @@
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequuntur quisquam impedit enim ipsam aut quod facilis, commodi, aliquam velit vero, saepe qui sed nisi ut repudiandae consectetur recusandae! Accusamus, quasi.</p>
 
         <div class="row">
-            <div class="facilities-col">
+            <div class="facilities-col hidden1">
                 <img src="trans.jpg" alt="">
                 <h3>Transportation</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, distinctio, eligendi magni, obcaecati tempora ullam quaerat atque fuga doloremque voluptas impedit beatae expedita consectetur labore debitis vel ipsam ea non.</p>
             </div>
 
-            <div class="facilities-col">
+            <div class="facilities-col hidden1">
                 <img src="trans2.jpg" alt="">
                 <h3>Delivery</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, distinctio, eligendi magni, obcaecati tempora ullam quaerat atque fuga doloremque voluptas impedit beatae expedita consectetur labore debitis vel ipsam ea non.</p>
             </div>
 
-            <div class="facilities-col">
+            <div class="facilities-col hidden1">
                 <img src="trans.jpg" alt="">
                 <h3>Transportation</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis, distinctio, eligendi magni, obcaecati tempora ullam quaerat atque fuga doloremque voluptas impedit beatae expedita consectetur labore debitis vel ipsam ea non.</p>
@@ -178,7 +180,7 @@
         
     </section>
     
-    <section class="testimonials">
+    <section class="testimonials hidden1">
         <h1>What Our Member Says</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam eligendi natus sunt mollitia ab. Aliquam sunt vel impedit facere officia, eius eligendi natus id nam commodi quos, unde ut sapiente.</p>
 
@@ -248,6 +250,32 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
 
+        var button = document.getElementById('slide');
+        button.onclick = function () {
+            var container = document.getElementById('container');
+            sideScroll(media-scroller,'right',25,100,10);
+        };
+
+        var back = document.getElementById('slideBack');
+        back.onclick = function () {
+            var container = document.getElementById('container');
+            sideScroll(container,'left',25,100,10);
+        };
+
+        function sideScroll(element,direction,speed,distance,step){
+            scrollAmount = 0;
+            var slideTimer = setInterval(function(){
+                if(direction == 'left'){
+                    element.scrollLeft -= step;
+                } else {
+                    element.scrollLeft += step;
+                }
+                scrollAmount += step;
+                if(scrollAmount >= distance){
+                    window.clearInterval(slideTimer);
+                }
+            }, speed);
+        }
 
         var navLinks = document.getElementById("navLinks");
     

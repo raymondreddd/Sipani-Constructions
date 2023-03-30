@@ -161,6 +161,12 @@ p{
     box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
 }
 
+.company-col:nth-child(2){
+    transition-delay: 200ms;
+}
+.company-col:nth-child(3){
+    transition-delay: 400ms;
+}
 h3{
     text-align: center;
     font-weight: 600;
@@ -191,6 +197,10 @@ h3{
     box-shadow: var(--shadow-1);
     transition: 0.4s;
 }
+
+/* .media-scroller::-webkit-scrollbar { 
+    display: none;  
+} */
 
 .cardm{
     background-color : lawngreen;
@@ -297,7 +307,12 @@ h3{
     padding: 0;
 }
 
-
+.facilities-col:nth-child(2){
+    transition-delay: 200ms;
+}
+.facilities-col:nth-child(3){
+    transition-delay: 400ms;
+}
 
 .testimonials{
     padding-top: 100px;
@@ -538,6 +553,26 @@ form i{
     color:#ff0000;
 }
 
+
+/* ADDING SCROLL EFFECT */
+
+.hidden1{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(2px);
+    transform: translateY(100%);
+}
+
+@media(prefers-reduced-motion){
+    .hidden1{
+        transition: none;
+    }
+}
+.show1{
+    opacity:1;
+    filter: blur(0);
+    transform: translateX(0);
+}
 
 @media(max-width: 700px){
     .text-box h1{
